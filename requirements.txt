@@ -1,0 +1,16 @@
+# SquareGate Bloomberg Analyzer – Python dependencies
+#
+# Bloomberg Python API
+# NOTE: blpapi is available on PyPI but requires the Bloomberg Terminal
+#       (or BAPI server) and its C++ runtime libraries to be installed.
+#       Install with: pip install blpapi
+#       Bloomberg SDK: https://www.bloomberg.com/professional/support/api-library/
+blpapi>=3.19.0
+
+# Data / Excel
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+
+# Build (optional — only needed to create the .exe)
+pyinstaller>=6.0.0
