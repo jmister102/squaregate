@@ -1,5 +1,5 @@
 """
-SquareGate Bloomberg Analyzer
+SquareGate Equity Funding Filter
 GUI application for Bloomberg data collection, screening, and Excel output.
 """
 
@@ -22,7 +22,7 @@ from filters import apply_filters, create_fail_reason
 from excel_formatter import format_excel_columns
 
 # ── App constants ──────────────────────────────────────────────────────────────
-APP_NAME    = "SquareGate Bloomberg Analyzer"
+APP_NAME    = "SquareGate Equity Funding Filter"
 APP_VERSION = "1.0.0"
 BBG_HOST    = "localhost"
 BBG_PORT    = 8194

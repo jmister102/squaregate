@@ -1,4 +1,4 @@
-# SquareGate Bloomberg Analyzer – Python dependencies
+# SquareGate Equity Funding Filter – Python dependencies
 #
 # Bloomberg Python API
 # NOTE: blpapi is available on PyPI but requires the Bloomberg Terminal

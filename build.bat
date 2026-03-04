@@ -2,7 +2,7 @@
 setlocal
 
 echo ============================================================
-echo  SquareGate Bloomberg Analyzer PyInstaller Build
+echo  SquareGate Equity Funding Filter PyInstaller Build
 echo ============================================================
 echo.
 

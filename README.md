@@ -1,4 +1,4 @@
-# SquareGate Bloomberg Analyzer
+# SquareGate Equity Funding Filter
 
 GUI tool for Bloomberg-based equity screening and Excel report generation.
 
