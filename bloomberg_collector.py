@@ -2,7 +2,13 @@
 
 import logging
 import pandas as pd
-import blpapi
+
+try:
+    import blpapi
+    BLPAPI_AVAILABLE = True
+except ImportError:
+    blpapi = None  # type: ignore[assignment]
+    BLPAPI_AVAILABLE = False
 
 logger = logging.getLogger(__name__)
 
@@ -19,6 +25,9 @@ class BloombergDataCollector:
 
     def connect(self) -> bool:
         """Open a Bloomberg API session. Returns True on success."""
+        if not BLPAPI_AVAILABLE:
+            logger.error("blpapi is not installed. Bloomberg Terminal SDK is required.")
+            return False
         try:
             opts = blpapi.SessionOptions()
             opts.setServerHost(self.host)

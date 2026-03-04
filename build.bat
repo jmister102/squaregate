@@ -2,12 +2,12 @@
 setlocal
 
 echo ============================================================
-echo  SquareGate Bloomberg Analyzer — PyInstaller Build
+echo  SquareGate Bloomberg Analyzer PyInstaller Build
 echo ============================================================
 echo.
 
 REM Ensure PyInstaller is available
-python -m pyinstaller --version >nul 2>&1
+"C:\Users\joshm\AppData\Local\Programs\Python\Python312\python.exe" -m PyInstaller --version >nul 2>&1
 if errorlevel 1 (
     echo [ERROR] PyInstaller not found. Install with: pip install pyinstaller
     pause & exit /b 1
@@ -20,17 +20,15 @@ if exist dist  rmdir /s /q dist
 echo [INFO] Building executable...
 echo.
 
-python -m pyinstaller ^
+"C:\Users\joshm\AppData\Local\Programs\Python\Python312\python.exe" -m PyInstaller ^
     --onefile ^
     --windowed ^
     --name "SquareGate" ^
-    --hidden-import blpapi ^
-    --hidden-import blpapi._internals ^
+    --exclude-module blpapi ^
     --hidden-import pandas ^
     --hidden-import numpy ^
     --hidden-import openpyxl ^
     --hidden-import openpyxl.styles ^
-    --collect-submodules blpapi ^
     main.py
 
 if errorlevel 1 (
